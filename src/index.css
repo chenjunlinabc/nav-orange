@@ -50,6 +50,7 @@ body{
   outline: none;
   border-color: #4e6ef2;
   background-color: #272822;
+  color: #e6e7e8;
 }
 .search-nav{
   display: -webkit-box;
@@ -73,6 +74,7 @@ body{
   width: 3.6rem;
   height: 2.5rem;
   margin-left: 1rem;
+  margin-bottom: .8rem;
   border-radius: .5rem;
   border-color: transparent;
 }
@@ -100,6 +102,7 @@ body{
 .search-view{
   margin-top: 3rem;
 }
+
 .search-view ul li{
   float: left;
   padding: .6rem 1rem;
@@ -107,14 +110,15 @@ body{
   border-radius: 1rem;
   background-color: #000;
 }
+
 .tech,.film,.tools,.info,.other{
-  width: 50rem;
-  height: 10rem;
+  max-width: 50rem;
   margin: 0 auto;
   background-color: #434343;
   margin-top: 2rem;
   padding: .6rem;
   border-radius: .6rem;
+  display: grid;
 }
 .tech ul li a,.film ul li a,.tools ul li a,.info ul li a,.other ul li a{
   color: #ccc;

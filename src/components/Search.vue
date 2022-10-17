@@ -28,17 +28,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   name: 'Search',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      count: 0
-    }
-  },
   methods:{
     searchClickb(){
       this.$refs.search.action = 'https://cn.bing.com/search'

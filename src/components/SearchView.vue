@@ -151,14 +151,6 @@
 <script>
 export default {
   name: 'SearchView',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      count: 0
-    }
-  }
 }
 
 </script>
