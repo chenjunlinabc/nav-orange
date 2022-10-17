@@ -1,0 +1,131 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+}
+ul li,ol{
+  list-style-type: none;
+  list-style: none;
+}
+a{
+  text-decoration: none; 
+}
+a:link,a:visited,a:active{
+  color: #444;
+}
+a:hover{
+  color: #000;
+} 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+hr{
+  border-top: none;
+  border-bottom: 1px dashed #000;
+}
+body{
+  background-color: #252934;
+}
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'PingFangSC-Regular', 'helvetica neue', tahoma, 'PingFang SC', 'microsoft yahei', arial, 'hiragino sans gb', sans-serif;
+}
+.main-search{
+  margin: 6rem auto 3rem auto;
+  padding: 1rem 0;
+  max-width: 38rem;
+}
+.search-control{
+  border-radius: 12px 0 0 12px;
+  padding: 8px 10px;
+  display: table-cell;
+  width: 100%;
+  outline: none;
+  border-color: #4e6ef2;
+  background-color: #272822;
+}
+.search-nav{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 24px;
+  background-color: #e6e7e8;
+}
+.search-submit{
+  width: 6rem;
+  height: 3rem;
+  color: #ebebd3;
+  background-color: #4e6ef2;
+  padding: 7px 10px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0 16px 16px 0;
+  border: 0;
+}
+.search-button .search-btn{
+  width: 3.6rem;
+  height: 2.5rem;
+  margin-left: 1rem;
+  border-radius: .5rem;
+  border-color: transparent;
+}
+.search-button .search-btn:hover{
+  cursor: pointer;
+}
+#bing{
+  background: #fff;
+}
+#google{
+  background: #67d8bd;
+}
+#baidu{
+  background: #fe8a34;
+}
+#zhihu{
+  background: #056de8;
+}
+#bilibili{
+  background: #fb7299;
+}
+#juejin{
+  background: #47c6f4;
+}
+.search-view{
+  margin-top: 3rem;
+}
+.search-view ul li{
+  float: left;
+  padding: .6rem 1rem;
+  margin: .3rem;
+  border-radius: 1rem;
+  background-color: #000;
+}
+.tech,.film,.tools,.info,.other{
+  width: 50rem;
+  height: 10rem;
+  margin: 0 auto;
+  background-color: #434343;
+  margin-top: 2rem;
+  padding: .6rem;
+  border-radius: .6rem;
+}
+.tech ul li a,.film ul li a,.tools ul li a,.info ul li a,.other ul li a{
+  color: #ccc;
+}
+.search-h{
+  float: left;
+}
+.box{
+  display: flex;
+}
+#footer{
+  margin-top: 3rem;
+  font-size: .3rem;
+}
