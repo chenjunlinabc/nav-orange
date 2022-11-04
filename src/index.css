@@ -116,7 +116,7 @@ body{
   background-color: #000;
 }
 
-.tech,.film,.tools,.info,.other{
+.tech,.film,.tools,.info,.other,.blog,.learn{
   max-width: 50rem;
   margin: 0 auto;
   background-color: #434343;
@@ -125,7 +125,7 @@ body{
   border-radius: .6rem;
   display: grid;
 }
-.tech ul li a,.film ul li a,.tools ul li a,.info ul li a,.other ul li a{
+.tech ul li a,.film ul li a,.tools ul li a,.info ul li a,.other ul li a,.blog  ul li a,.learn  ul li a{
   color: #ccc;
 }
 .search-h{
