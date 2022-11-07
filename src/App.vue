@@ -4,7 +4,7 @@
   <SearchFooter/>
 </template>
 
-<script>
+<script scoped>
 import Search from './components/Search.vue'
 import SearchView from './components/SearchView.vue'
 import SearchFooter from './components/SearchFooter.vue'
