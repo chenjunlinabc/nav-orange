@@ -2,7 +2,7 @@
   <section class="main-search">
     <form method="get" class="search-nav" action="https://cn.bing.com/search" target="_blank" ref="search">
       <input type="text" name="q" ref="btn" class="search-control" placeholder="搜索一下"/>
-      <input type="submit" class="search-submit" value="搜索" @click="btnGo()">
+      <input type="submit" class="search-submit" value="搜索">
     </form>
   </section>
   <div class="search-button">
@@ -34,9 +34,6 @@ export default {
 
   },
   methods:{
-    btnGo(){
-      
-    },
     searchClickb(){
       this.$refs.search.action = 'https://cn.bing.com/search'
       this.$refs.btn.name = 'q'

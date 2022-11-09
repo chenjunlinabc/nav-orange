@@ -33,6 +33,14 @@ body{
   background-color: #252934;
   width: 100%;
 }
+input{
+  background: none;
+  outline: none;
+  border: none;
+}
+input:focus{
+  border: 0;
+}
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,16 +60,14 @@ body{
   display: table-cell;
   width: 100%;
   outline: none;
-  border-color: #4e6ef2;
   background-color: #272822;
-  color: #e6e7e8;
+  border: 10px #056de8;
 }
 .search-nav{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-radius: 24px;
-  background-color: #e6e7e8;
 }
 .search-submit{
   width: 6rem;
@@ -70,10 +76,9 @@ body{
   background-color: #4e6ef2;
   padding: 7px 10px;
   cursor: pointer;
-  outline: none;
   border-radius: 0 16px 16px 0;
-  border: 0;
 }
+
 .search-button .search-btn{
   width: 3.6rem;
   height: 2.5rem;
@@ -113,7 +118,7 @@ body{
   padding: .6rem 1rem;
   margin: .3rem;
   border-radius: 1rem;
-  background-color: #000;
+  background-color: #272822;
 }
 
 .tech,.film,.tools,.info,.other,.blog,.learn{
