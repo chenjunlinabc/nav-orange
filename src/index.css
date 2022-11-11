@@ -60,7 +60,7 @@ input:focus{
   display: table-cell;
   width: 100%;
   outline: none;
-  background-color: #272822;
+  background-color: #e8f0fe;
   border: 10px #056de8;
 }
 .search-nav{

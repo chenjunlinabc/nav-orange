@@ -1,7 +1,7 @@
 <template>
   <section class="main-search">
     <form method="get" class="search-nav" action="https://cn.bing.com/search" target="_blank" ref="search">
-      <input type="text" name="q" ref="btn" class="search-control" placeholder="搜索一下"/>
+      <input type="text" name="q" ref="btn" class="search-control" placeholder="搜索一下" @focus='inputfocus()'/>
       <input type="submit" class="search-submit" value="搜索">
     </form>
   </section>
