@@ -117,8 +117,6 @@ input:focus{
   float: left;
   padding: .6rem 1rem;
   margin: .3rem;
-  border-radius: 1rem;
-  background-color: #272822;
 }
 
 .tech,.film,.tools,.info,.other,.blog,.learn{
@@ -132,9 +130,11 @@ input:focus{
 }
 .tech ul li a,.film ul li a,.tools ul li a,.info ul li a,.other ul li a,.blog  ul li a,.learn  ul li a{
   color: #ccc;
+  font-size: .95rem;
 }
 .search-h{
   float: left;
+  color: #272822;
 }
 .box{
   display: flex;
@@ -142,4 +142,19 @@ input:focus{
 #footer{
   margin-top: 3rem;
   font-size: .3rem;
+}
+.AddTo, .revise{
+  background-color: #272822;
+  color: #c6c9cf;
+  cursor: pointer;
+  border-radius: .6rem;
+}
+.AddTo{
+  padding: .3rem .5rem;
+  
+}
+.revise{
+  padding: .2rem .6rem;
+  position: relative;
+  left: 42rem;
 }
