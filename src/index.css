@@ -157,8 +157,8 @@ input:focus{
 }
 .revise{
   padding: .2rem .6rem;
-  position: relative;
-  left: 42rem;
+  justify-content: flex-end;
+  margin-left: auto;
 }
 .homenav-main{
   position: fixed;

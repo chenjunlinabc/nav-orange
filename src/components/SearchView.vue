@@ -4,7 +4,7 @@
         <div class="other">
             <div class="box">
                 <h3 class="homeNav">我的导航</h3>
-                <span class="revise" @click="rmNav()">清除</span>
+                <div class="revise" @click="rmNav()">清除</div>
             </div>
             
             <ul>
