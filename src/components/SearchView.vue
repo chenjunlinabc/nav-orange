@@ -1,17 +1,18 @@
 <template>
+    <HomeNav v-if="HomeNavStore.homeNavAddyes"/>
     <div class="search-view">
         <div class="other">
             <div class="box">
                 <h3 class="homeNav">我的导航</h3>
-                <span class="revise" @click="rmNav()">编辑</span>
+                <span class="revise" @click="rmNav()">清除</span>
             </div>
             
             <ul>
-                <li v-for="navTO in hallo" class="Homenav">
+                <li v-for="navTO in UrlData" class="Homenav">
                     <a v-bind:href="navTO.url"  rel="noopener noreferrer" target="_blank">{{ navTO.name }}</a>
                 </li>
                 <li>
-                    <span class="AddTo" @click="AddToNav()">+</span>
+                    <span class="AddTo" @click="AddNav()">+</span>
                 </li>
                 
             </ul>
@@ -181,57 +182,38 @@
         </div>
     </div>
 </template>
-<script>
-export default {
-  name: 'SearchView',
-  methods: {
-      AddToNav(){
-          localStorage.setItem("Links", JSON.stringify(
-            [
-                {
-                    'name': '小陈的辣鸡屋',
-                    'url': 'https://cjlio.com'
-                }, {
-                    'name': '小陈的个人博客',
-                    'url': 'https://blog.cjlio.com'
-                  }, {
-                      'name': '小陈的辣鸡屋',
-                      'url': 'https://cjlio.com'
-                  }, {
-                      'name': '小陈的辣鸡屋',
-                      'url': 'https://cjlio.com'
-                  }, {
-                      'name': '小陈的辣鸡屋',
-                      'url': 'https://cjlio.com'
-                  }, {
-                      'name': '小陈的辣鸡屋',
-                      'url': 'https://cjlio.com'
-                  }, {
-                      'name': '小陈的辣鸡屋',
-                      'url': 'https://cjlio.com'
-                  }, {
-                      'name': '小陈的辣鸡屋',
-                      'url': 'https://cjlio.com'
-                  }, {
-                      'name': '小陈的辣鸡屋',
-                      'url': 'https://cjlio.com'
-                  }, {
-                      'name': '小陈的辣鸡屋',
-                      'url': 'https://cjlio.com'
-                  },
-            ]
-          ))
-      },
-      rmNav(){
-          localStorage.removeItem("小陈的辣鸡屋")
-      }
-  },
-  data(){
-    return{
-        hallo: JSON.parse(localStorage.getItem('Links'))
-    }
-  },
-}
-console.log(JSON.parse(localStorage.getItem('Links')))
+<script scope>
+import HomeNav from "./HomeNav.vue"
+import { useNavStore } from "./HomeNav.vue"
 
+export default {
+    name: 'SearchView',
+    data(){
+        const HomeNav = useNavStore()
+        return{
+            UrlData: JSON.parse(localStorage.getItem('Links')),
+            HomeNavStore: HomeNav
+        }
+    },
+    methods: {
+        rmNav() {
+            if (localStorage.getItem('Links')){
+                localStorage.removeItem("Links")
+                this.$data.UrlData = JSON.parse(localStorage.getItem('Links'))
+            }
+        },
+        AddNav(){
+            const NavStore = useNavStore()
+            NavStore.AddToNav()
+        }
+    },
+    components: {
+        HomeNav
+    },
+    beforeUpdate() {
+        this.$data.UrlData = JSON.parse(localStorage.getItem('Links'))
+    },
+}
 </script>
+
+

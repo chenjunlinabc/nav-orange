@@ -8,6 +8,7 @@
 import Search from './components/Search.vue'
 import SearchView from './components/SearchView.vue'
 import SearchFooter from './components/SearchFooter.vue'
+import HomeNav from './components/HomeNav.vue'
 
 export default {
   name: 'App',
@@ -15,6 +16,8 @@ export default {
     Search,
     SearchView,
     SearchFooter,
-  }
+    HomeNav
+  },
 }
+
 </script>
