@@ -1,10 +1,12 @@
 <template>
     <HomeNav v-if="HomeNavStore.homeNavAddyes"/>
+    <Homesync v-if="SyncyesData.Syncyes"/>
     <div class="search-view">
         <div class="other">
             <div class="box">
                 <h3 class="homeNav">我的导航</h3>
                 <div class="revise" @click="rmNav()">清除</div>
+                <div class="sync" @click="syncget()">导入/导出</div>
             </div>
             
             <ul>
@@ -184,15 +186,18 @@
 </template>
 <script scope>
 import HomeNav from "./HomeNav.vue"
+import Homesync from "./Homesync.vue"
 import { useNavStore } from "./HomeNav.vue"
-
+import { SyncStore } from "./Homesync.vue"
 export default {
     name: 'SearchView',
     data(){
         const HomeNav = useNavStore()
+        const HomeSyncyes = SyncStore()
         return{
             UrlData: JSON.parse(localStorage.getItem('Links')),
-            HomeNavStore: HomeNav
+            HomeNavStore: HomeNav,
+            SyncyesData: HomeSyncyes,
         }
     },
     methods: {
@@ -205,10 +210,15 @@ export default {
         AddNav(){
             const NavStore = useNavStore()
             NavStore.AddToNav()
+        },
+        syncget(){
+            const HomeSyncyes = SyncStore()
+            HomeSyncyes.SyncTo()
         }
     },
     components: {
-        HomeNav
+        HomeNav,
+        Homesync,
     },
     beforeUpdate() {
         this.$data.UrlData = JSON.parse(localStorage.getItem('Links'))
